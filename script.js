@@ -29,6 +29,21 @@ map.on('load', () => {
         },
     }); //Add the layer to the map and format the layer.
 
+    map.addSource('line2incompleted', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/kevinyuanzy/472-Lab3-KY/refs/heads/main/line2incompleted.geojson' // The URL to GeoJson incompleted portion of subway line.
+    });
+
+    map.addLayer({
+        'id': 'line2-incompleted-line', 
+        'type': 'line', 
+        'source': 'line2incompleted',
+        'paint': {
+            'line-color': '#00923f',
+            'line-width': 2,
+        },
+    });
+
     map.addSource('stations_completed', {
         type: 'geojson',
         data: 'https://raw.githubusercontent.com/kevinyuanzy/472-Lab3-KY/refs/heads/main/stations_completed.geojson' // The URL to GeoJson completed station points.
@@ -40,9 +55,9 @@ map.on('load', () => {
         'source': 'stations_completed',
         'paint': {
             'circle-color': '#f5f5f5',
-            'circle-radius': 5,
             'circle-stroke-width': 1.5,
-            'circle-stroke-color': '#000000'
+            'circle-stroke-color': '#000000',
+            'circle-radius': 5
         },
     }); 
 
