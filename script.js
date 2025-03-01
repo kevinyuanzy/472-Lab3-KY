@@ -11,10 +11,27 @@ const map = new mapboxgl.Map({
 
 //Use "map.on" event listener to add features to the webmap.
 map.on('load', () => {
-    //Add the station_points.geojson file from GitHub repository. 
+    
+    //Add geojson files from GitHub repository. 
+
+    map.addSource('line2completed', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/kevinyuanzy/472-Lab3-KY/refs/heads/main/line2completed.geojson' // The URL to GeoJson completed portion of subway line.
+    });
+
+    map.addLayer({
+        'id': 'line2-completed-line', 
+        'type': 'line', 
+        'source': 'line2completed',
+        'paint': {
+            'line-color': '#00923f',
+            'line-width': 2,
+        },
+    }); //Add the layer to the map and format the layer.
+
     map.addSource('stations_completed', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/kevinyuanzy/472-Lab3-KY/refs/heads/main/stations_completed.geojson' // The URL to my GeoJson polygon.
+        data: 'https://raw.githubusercontent.com/kevinyuanzy/472-Lab3-KY/refs/heads/main/stations_completed.geojson' // The URL to GeoJson completed station points.
     });
 
     map.addLayer({
@@ -27,11 +44,11 @@ map.on('load', () => {
             'circle-stroke-width': 1.5,
             'circle-stroke-color': '#000000'
         },
-    });
+    }); 
 
     map.addSource('stations_incompleted', {
         type: 'geojson',
-        data: 'https://raw.githubusercontent.com/kevinyuanzy/472-Lab3-KY/refs/heads/main/stations_incompleted.geojson' // The URL to my GeoJson polygon.
+        data: 'https://raw.githubusercontent.com/kevinyuanzy/472-Lab3-KY/refs/heads/main/stations_incompleted.geojson' // The URL to GeoJson incompleted station points.
     });
 
     map.addLayer({
@@ -44,7 +61,9 @@ map.on('load', () => {
             'circle-stroke-width': 1.5,
             'circle-stroke-color': '#000000'
         },
-    });
+    }); 
+
+    
 
 });
 
