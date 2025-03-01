@@ -11,6 +11,23 @@ const map = new mapboxgl.Map({
 
 //Use "map.on" event listener to add features to the webmap.
 map.on('load', () => {
-    //Add the station_points.geojson file from GitHub repository.
-    
+    //Add the station_points.geojson file from GitHub repository. 
+    map.addSource('stations_points', {
+        type: 'geojson',
+        data: 'https://raw.githubusercontent.com/kevinyuanzy/472-Lab3-KY/refs/heads/main/stations_points.geojson' // The URL to my GeoJson polygon.
+    });
+
+    map.addLayer({
+        'id': 'line2-stations', 
+        'type': 'circle', 
+        'source': 'stations_points',
+        'paint': {
+            'circle-color': '#f5f5f5',
+            'circle-radius': 5,
+            'circle-stroke-width': 1.5,
+            'circle-stroke-color': '#000000'
+        },
+    });
+
 });
+
