@@ -57,7 +57,7 @@ map.on('load', () => {
             'circle-color': '#f5f5f5',
             'circle-stroke-width': 1.5,
             'circle-stroke-color': '#000000',
-            'circle-radius': 2.8
+            'circle-radius': ['/', ['get', 'transfer'], 2]
         },
     }); 
 

@@ -1,7 +1,7 @@
 {"type":"FeatureCollection","features":[
     {"type":"Feature","properties":{"name":"Kipling","transfer":"2.8","completed":"Y"},"geometry":{"coordinates":[-79.53553073779062,43.637610873815674],"type":"Point"}},
     {"type":"Feature","properties":{"name":"Islington","transfer":"2.8","completed":"Y"},"geometry":{"coordinates":[-79.5248440361192,43.64530481728232],"type":"Point"}},
-    {"type":"Feature","properties":{"name":"Old Mill","completed":"2.8","transfer":"N"},"geometry":{"coordinates":[-79.49435789093108,43.649798402602755],"type":"Point"}},
+    {"type":"Feature","properties":{"name":"Old Mill","transfer":"2.8","completed":"Y"},"geometry":{"coordinates":[-79.49435789093108,43.649798402602755],"type":"Point"}},
     {"type":"Feature","properties":{"name":"Jane","transfer":"2.8","completed":"Y"},"geometry":{"coordinates":[-79.48388425170143,43.64991826009472],"type":"Point"}},
     {"type":"Feature","properties":{"name":"Runnymede","transfer":"2.8","completed":"Y"},"geometry":{"coordinates":[-79.47601287498841,43.65169722523308],"type":"Point"}},
     {"type":"Feature","properties":{"name":"High Park","transfer":"2.8","completed":"Y"},"geometry":{"coordinates":[-79.46687639142382,43.653887045364115],"type":"Point"}},
