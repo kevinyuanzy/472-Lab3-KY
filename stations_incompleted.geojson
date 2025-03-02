@@ -1,1 +1,5 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"name":"Lawrence","transfer":"N","completed":"N"},"geometry":{"coordinates":[-79.24543077700008,43.75554930937611],"type":"Point"}},{"type":"Feature","properties":{"name":"Scarborough Centre","transfer":"N","completed":"N"},"geometry":{"coordinates":[-79.25261419816316,43.77548087773769],"type":"Point"}},{"type":"Feature","properties":{"name":"Sheppard","transfer":"Y","completed":"N"},"geometry":{"coordinates":[-79.2578862604412,43.789836378370836],"type":"Point"}}]}
+{"type":"FeatureCollection","features":[
+    {"type":"Feature","properties":{"name":"Lawrence","transfer":"2.8","completed":"N"},"geometry":{"coordinates":[-79.24543077700008,43.75554930937611],"type":"Point"}},
+    {"type":"Feature","properties":{"name":"Scarborough Centre","transfer":"2.8","completed":"N"},"geometry":{"coordinates":[-79.25261419816316,43.77548087773769],"type":"Point"}},
+    {"type":"Feature","properties":{"name":"Sheppard","transfer":"5","completed":"N"},"geometry":{"coordinates":[-79.2578862604412,43.789836378370836],"type":"Point"}}
+]}

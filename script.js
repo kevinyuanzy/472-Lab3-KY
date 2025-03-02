@@ -6,7 +6,7 @@ const map = new mapboxgl.Map({
     container: 'Lab2Map', // map container ID in the index.html file.
     style: 'mapbox://styles/kevinyuanzy/cm6ztbpqc003s01qwcvdrf6ft', // style URL from created MapBox style.
     center: [-79.391820, 43.701268], // starting position [lng, lat]. 
-    zoom: 11, // starting zoom level.
+    zoom: 11.25, // starting zoom level.
 });
 
 //Use "map.on" event listener to add features to the webmap.
@@ -57,7 +57,7 @@ map.on('load', () => {
             'circle-color': '#f5f5f5',
             'circle-stroke-width': 1.5,
             'circle-stroke-color': '#000000',
-            'circle-radius': 5
+            'circle-radius': 2.8
         },
     }); 
 
@@ -72,9 +72,9 @@ map.on('load', () => {
         'source': 'stations_incompleted',
         'paint': {
             'circle-color': '#f5f5f5',
-            'circle-radius': 5,
             'circle-stroke-width': 1.5,
-            'circle-stroke-color': '#000000'
+            'circle-stroke-color': '#000000',
+            'circle-radius': 5
         },
     }); 
 
