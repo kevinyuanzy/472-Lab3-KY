@@ -55,9 +55,9 @@ map.on('load', () => {
         'source': 'stations_completed',
         'paint': {
             'circle-color': '#f5f5f5',
+            'circle-radius': ['*', ['get', 'transfer'], 2],
             'circle-stroke-width': 1.5,
             'circle-stroke-color': '#000000',
-            'circle-radius': ['/', ['get', 'transfer'], 2]
         },
     }); 
 
@@ -72,9 +72,9 @@ map.on('load', () => {
         'source': 'stations_incompleted',
         'paint': {
             'circle-color': '#f5f5f5',
+            'circle-radius': ['*', ['get', 'transfer'], 2],
             'circle-stroke-width': 1.5,
             'circle-stroke-color': '#000000',
-            'circle-radius': 5
         },
     }); 
 
