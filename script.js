@@ -92,7 +92,23 @@ map.on('load', () => {
         },
     }); 
 
-    
+    //// Create a popup, so station names and transfer information will appear when mouse clicks on features.
+    map.on('click', 'line2-completed-stations', (e) => {
+        new mapboxgl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML(e.features[0].properties.name)
+            .addTo(map);
+    });
+
+    // Change the cursor to a pointer when the mouse is over the parks layer.
+    map.on('mouseenter', 'line2-completed-stations', () => {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    // Change the cursor back to a pointer when it leaves the parks layer.
+    map.on('mouseleave', 'line2-completed-stations', () => {
+        map.getCanvas().style.cursor = '';
+    });
 
 });
 
