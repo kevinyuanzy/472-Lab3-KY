@@ -28,6 +28,6 @@
     {"type":"Feature","properties":{"name":"Main Street","transfer":3,"transferto":"Streetcar 506, Bus"},"geometry":{"coordinates":[-79.30156220245586,43.68884313044623],"type":"Point"}},
     {"type":"Feature","properties":{"name":"Victoria Park","transfer":3,"transferto":"Bus"},"geometry":{"coordinates":[-79.2888261115483,43.694868515117975],"type":"Point"}},
     {"type":"Feature","properties":{"name":"Warden","transfer":3,"transferto":"Bus"},"geometry":{"coordinates":[-79.27906754196147,43.7111176654704],"type":"Point"}},
-    {"type":"Feature","properties":{"name":"Kennedy","transfer":5,"transferto":"GO Train ST Line, TTC LRT Line 5 Extension (Under construction), Buses"},"geometry":{"coordinates":[-79.26377132353792,43.73242110390757],"type":"Point"},"id":29},
+    {"type":"Feature","properties":{"name":"Kennedy","transfer":5,"transferto":"GO Train ST Line, TTC LRT Line 5 (Under construction), Buses"},"geometry":{"coordinates":[-79.26377132353792,43.73242110390757],"type":"Point"},"id":29},
     {"type":"Feature","properties":{"name":"Royal York","transfer":3,"transferto":"Bus"},"geometry":{"coordinates":[-79.51129916544306,43.64817287739265],"type":"Point"},"id":33}
 ]}
