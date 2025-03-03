@@ -92,7 +92,7 @@ map.on('load', () => {
         },
     }); 
 
-    //// Create a popup, so station names and transfer information will appear when mouse clicks on features.
+    //Create a popup, so station names and transfer information will appear when mouse clicks on features.
     map.on('click', 'line2-completed-stations', (e) => {
         new mapboxgl.Popup()
             .setLngLat(e.lngLat)
@@ -100,15 +100,29 @@ map.on('load', () => {
             .addTo(map);
     });
 
-    // Change the cursor to a pointer when the mouse is over the parks layer.
     map.on('mouseenter', 'line2-completed-stations', () => {
         map.getCanvas().style.cursor = 'pointer';
     });
 
-    // Change the cursor back to a pointer when it leaves the parks layer.
+    
     map.on('mouseleave', 'line2-completed-stations', () => {
         map.getCanvas().style.cursor = '';
     });
+    
+    //Create another popup for incompleted stations.
+    map.on('click', 'line2-incompleted-stations', (e) => {
+        new mapboxgl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML("<b>Station Name:</b> " + e.features[0].properties.name + "<br>" + "Transfer to: " + e.features[0].properties.transferto)          
+            .addTo(map);
+    });
 
+    map.on('mouseenter', 'line2-incompleted-stations', () => {
+        map.getCanvas().style.cursor = 'pointer';
+    });
+
+    map.on('mouseleave', 'line2-incompleted-stations', () => {
+        map.getCanvas().style.cursor = '';
+    });
 });
 
