@@ -12,7 +12,7 @@
     {"type":"Feature","properties":{"name":"Ossington","transfer":3,"transferto":"Bus"},"geometry":{"coordinates":[-79.42612333080334,43.66238654054757],"type":"Point"}},
     {"type":"Feature","properties":{"name":"Christie","transfer":3,"transferto":"Bus"},"geometry":{"coordinates":[-79.41841818577926,43.66411169104765],"type":"Point"}},
     {"type":"Feature","properties":{"name":"Bathurst","transfer":3,"transferto":"Streetcar 511, Bus"},"geometry":{"coordinates":[-79.41114430563519,43.665694013524586],"type":"Point"}},
-    {"type":"Feature","properties":{"name":"Spadina","transfer":5,"transferto":"Streetcar 510, Bus"},"geometry":{"coordinates":[-79.40369908993708,43.6671435743429],"type":"Point"}},
+    {"type":"Feature","properties":{"name":"Spadina","transfer":5,"transferto":"TTC Subway Line 1, Streetcar 510, Bus"},"geometry":{"coordinates":[-79.40369908993708,43.6671435743429],"type":"Point"}},
     {"type":"Feature","properties":{"name":"St. George","transfer":5,"transferto":"TTC Subway Line 1, Bus (No direct transfer)"},"geometry":{"coordinates":[-79.39880237207574,43.66821235380519],"type":"Point"}},
     {"type":"Feature","properties":{"name":"Bay","transfer":3,"transferto":"Bus (No direct transfer)"},"geometry":{"coordinates":[-79.3902096946922,43.66993949984385],"type":"Point"}},
     {"type":"Feature","properties":{"name":"Bloor-Yonge","transfer":5,"transferto":"TTC Subway Line 1, Bus (No direct transfer)"},"geometry":{"coordinates":[-79.38570147048004,43.670809901814295],"type":"Point"}},
