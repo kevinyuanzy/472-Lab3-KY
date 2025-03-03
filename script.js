@@ -9,6 +9,19 @@ const map = new mapboxgl.Map({
     zoom: 11.25, // starting zoom level.
 });
 
+//Add search control to map overlay
+//Requires plugin as source in HTML body
+map.addControl(
+    new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        mapboxgl: mapboxgl,
+        countries: "ca"
+    })
+);
+
+//Add zoom and rotation controls to the map.
+map.addControl(new mapboxgl.NavigationControl());
+
 //Use "map.on" event listener to add features to the webmap.
 map.on('load', () => {
     
@@ -54,7 +67,8 @@ map.on('load', () => {
         'type': 'circle', 
         'source': 'stations_completed',
         'paint': {
-            'circle-radius': ['*', ['get','transfer'], 1],
+            'circle-radius': ['*', ['get','transfer'], 1], 
+            //Transfer stations and non-transfer stations are represented by different sizes of circles on the map. (non-transfer at 3 and transfer at 5.)
             'circle-color': '#f5f5f5',
             'circle-stroke-width': 1.5,
             'circle-stroke-color': '#000000',
