@@ -96,7 +96,7 @@ map.on('load', () => {
     map.on('click', 'line2-completed-stations', (e) => {
         new mapboxgl.Popup()
             .setLngLat(e.lngLat)
-            .setHTML(e.features[0].properties.name)
+            .setHTML("<b>Station Name:</b> " + e.features[0].properties.name + "<br>" + "Transfer to: " + e.features[0].properties.transferto)          
             .addTo(map);
     });
 
