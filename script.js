@@ -72,7 +72,13 @@ map.on('load', () => {
         'paint': {
             'circle-radius': ['*', ['get','transfer'], 1], 
             //Stations that can transfer to other subway line(s) or train route(s) are shown in larger icons. (non-transfer at 3 and transfer at 5, written in .geojson file "properties-transfer" row.)
-            'circle-color': '#f5f5f5',
+            'circle-color':[ 
+              'step', // STEP expression produces stepped results based on value pairs
+              ['get', 'transfer'], // GET expression retrieves property value from 'capacity' data field
+              '#800026', // Colour assigned to any values < first step
+              3, '#000000', // Colours assigned to values >= each step
+              5, '#ff1a1a',
+            ]
         },
     }); 
 
@@ -87,7 +93,13 @@ map.on('load', () => {
         'source': 'stations_incompleted',
         'paint': {
             'circle-radius': ['*', ['get','transfer'], 1],
-            'circle-color': '#f5f5f5',
+            'circle-color': [ 
+                'step', // STEP expression produces stepped results based on value pairs
+                ['get', 'transfer'], // GET expression retrieves property value from 'capacity' data field
+                '#800026', // Colour assigned to any values < first step
+                3, '#000000', // Colours assigned to values >= each step
+                5, '#ff1a1a',
+              ]
         },
     }); 
 
@@ -143,7 +155,7 @@ map.on('load', () => {
 
     //Declare array variables for labels and colours
     const legendlabels = [
-    'Stations',
+    'Non-exchange Stations',
     'Exchange Stations'
     ];
 
