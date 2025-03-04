@@ -128,6 +128,21 @@ map.on('load', () => {
         map.getCanvas().style.cursor = '';
     });
 
+    //Change map layer display based on check box using setLayoutProperty method
+    document.getElementById('layercheck').addEventListener('change', (e) => {
+        map.setLayoutProperty(
+            'line2-incompleted-stations',
+            'visibility',
+        e.target.checked ? 'visible' : 'none'
+        );
+    });
 
+    document.getElementById('layercheck').addEventListener('change', (e) => {
+        map.setLayoutProperty(
+            'line2-incompleted-line',
+            'visibility',
+        e.target.checked ? 'visible' : 'none'
+        );
+    });
 });
 
