@@ -7,6 +7,7 @@ For this lab, I created an interactive map showing the Toronto Subway Line 2, in
 
 ## Data
 I created 4 .geojson files for this map, including:
+
     -`line2completed.geojson`: completed portion of line 2.
     -`line2incompleted.geojson`: incompleted portion of line 2.
     Both are line features, displaying in green line on the map.
