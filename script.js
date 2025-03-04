@@ -22,6 +22,9 @@ map.addControl(
 //Add zoom and rotation controls to the map.
 map.addControl(new mapboxgl.NavigationControl());
 
+// Add fullscreen option to the map
+map.addControl(new mapboxgl.FullscreenControl()); 
+
 //Use "map.on" event listener to add features to the webmap.
 map.on('load', () => {
     
@@ -124,5 +127,7 @@ map.on('load', () => {
     map.on('mouseleave', 'line2-incompleted-stations', () => {
         map.getCanvas().style.cursor = '';
     });
+
+
 });
 
