@@ -94,10 +94,10 @@ map.on('load', () => {
         'paint': {
             'circle-radius': ['*', ['get','transfer'], 1],
             'circle-color': [ 
-                'step', // STEP expression produces stepped results based on value pairs
-                ['get', 'transfer'], // GET expression retrieves property value from 'capacity' data field
-                '#800026', // Colour assigned to any values < first step
-                3, '#000000', // Colours assigned to values >= each step
+                'step',
+                ['get', 'transfer'], 
+                '#800026', 
+                3, '#000000', 
                 5, '#ff1a1a',
               ]
         },
