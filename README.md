@@ -10,9 +10,12 @@ I created 4 .geojson files for this map, including:
 
 - `line2completed.geojson`: completed portion of line 2.
 - `line2incompleted.geojson`: incompleted portion of line 2.
+
 Both are line features, displaying in green line on the map.
+
 - `stations_completed.geojson`: completed stations.
 - `stations_incompleted.geojson`: incompleted stations.
+
 Both are point features, displaying in either black or red points on the map.
 
 
