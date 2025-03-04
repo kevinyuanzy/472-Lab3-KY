@@ -144,5 +144,39 @@ map.on('load', () => {
         e.target.checked ? 'visible' : 'none'
         );
     });
+
+    //Declare array variables for labels and colours
+    const legendlabels = [
+    'Stations',
+    'Exchange Stations'
+    ];
+
+    const legendcolours = [
+    '#000000',
+    '#ff1a1a'
+    ];
+
+    //Declare legend variable using legend div tag
+    const legend = document.getElementById('legend');
+
+    //For each layer create a block to put the colour and label in
+    legendlabels.forEach((label, i) => {
+    const colour = legendcolours[i];
+
+    const item = document.createElement('div'); //each layer gets a 'row' - this isn't in the legend yet, we do this later
+    const key = document.createElement('span'); //add a 'key' to the row. A key will be the colour circle
+
+    key.className = 'legend-key'; //the key will take on the shape and style properties defined in css
+    key.style.backgroundColor = colour; // the background color is retreived from teh layers array
+
+    const value = document.createElement('span'); //add a value variable to the 'row' in the legend
+    value.innerHTML = `${label}`; //give the value variable text based on the label
+
+    item.appendChild(key); //add the key (colour cirlce) to the legend row
+    item.appendChild(value); //add the value to the legend row
+
+    legend.appendChild(item); //add row to the legend
+    });
+
 });
 
