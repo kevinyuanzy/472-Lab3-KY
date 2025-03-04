@@ -73,8 +73,6 @@ map.on('load', () => {
             'circle-radius': ['*', ['get','transfer'], 1], 
             //Stations that can transfer to other subway line(s) or train route(s) are shown in larger icons. (non-transfer at 3 and transfer at 5, written in .geojson file "properties-transfer" row.)
             'circle-color': '#f5f5f5',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-color': '#000000',
         },
     }); 
 
@@ -90,8 +88,6 @@ map.on('load', () => {
         'paint': {
             'circle-radius': ['*', ['get','transfer'], 1],
             'circle-color': '#f5f5f5',
-            'circle-stroke-width': 1.5,
-            'circle-stroke-color': '#000000',
         },
     }); 
 
