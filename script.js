@@ -143,9 +143,6 @@ map.on('load', () => {
             'visibility',
         e.target.checked ? 'visible' : 'none'
         );
-    });
-
-    document.getElementById('layercheck').addEventListener('change', (e) => {
         map.setLayoutProperty(
             'line2-incompleted-line',
             'visibility',
